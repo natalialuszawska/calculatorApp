@@ -11,7 +11,7 @@
         <input type="number" min="0" max="110" [(ngModel)]="results.diastolic" name="diastolic" required #diastolic="ngModel"><br>
         <label *ngIf="diastolic.touched && !diastolic.valid">Blood pressure required, the value must be grater or equal zero.</label><br>
   
-        <button  class="btn red" type="submit" [disabled]="!myForm.valid">Save</button><br>
+        <button  class="btn red" type="submit" [disabled]="!myForm.valid">Calculate</button><br>
         
         <div *ngIf="showResult" class="center">
             <label>{{results.bloodprescom}}</label><br>

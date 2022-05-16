@@ -1,0 +1,105 @@
+<body>
+    <div class="ex1">
+      <br>
+      <h1 class="center">TYPE 2 DIABETES TEST</h1>
+      
+      <form #myForm="ngForm" (ngSubmit)="type2Test(myForm)">
+  
+         <h3>1. Age</h3><br>
+         <input type="radio" name="age" value="lessThan45" [(ngModel)]="type2.age" required #myAge="ngModel" />
+         <label> less than 45 </label><br>
+         <input type="radio" name="age" value="45to54" [(ngModel)]="type2.age" required #myAge="ngModel" />
+         <label> 45-54</label><br>
+         <input type="radio" name="age" value="55to64" [(ngModel)]="type2.age" required #myAge="ngModel" />
+         <label> 55-64 </label><br>
+         <input type="radio" name="age" value="moreThan65" [(ngModel)]="type2.age" required #myAge="ngModel" />
+         <label> more than 65 </label><br>
+        
+         <h3>2. BMI</h3><br>
+         <input type="radio" name="bmi" value="lessThan25" [(ngModel)]="type2.bmi" required #myBmi="ngModel" />
+         <label> less than 25</label><br>
+         <input type="radio" name="bmi" value="25to29" [(ngModel)]="type2.bmi" required #myBmi="ngModel" />
+         <label> 25-29</label><br>
+         <input type="radio" name="bmi" value="moreThan30" [(ngModel)]="type2.bmi" required #myBmi="ngModel" />
+         <label> more than 30 </label><br>
+         
+         <h3>3. Abdominal circumference measured below the ribs (usually at the navel):</h3><br>
+         <input type="radio" name="abdominal" value="lessThan94" [(ngModel)]="type2.abdominal" required #myAbdominal="ngModel" />
+         <label> less than 80 cm (woman) or 94 cm (man)</label><br>
+         <input type="radio" name="abdominal" value="94to102" [(ngModel)]="type2.abdominal" required #myAbdominal="ngModel" />
+         <label> 80-88 cm (woman) or 94-102 cm (man)</label><br>
+         <input type="radio" name="abdominal" value="moreThan102" [(ngModel)]="type2.abdominal" required #myAbdominal="ngModel" />
+         <label> more than 88 cm (woman) or 102 cm (Man)</label><br>
+
+         <h3>4. How often do you perform daily physical activity during work or free time for at least 30 minutes?</h3><br>
+         <input type="radio" name="activity" value="everyday" [(ngModel)]="type2.activity" required #myActivity="ngModel" />
+         <label> everyday</label><br>
+         <input type="radio" name="activity" value="notEveryday" [(ngModel)]="type2.activity" required #myActivity="ngModel" />
+         <label> less often than everyday</label><br>
+         <br>
+
+         <h3>5. Do you take or have taken any medications to lower your blood pressure?</h3><br>
+         <input type="radio" name="meds" value="n" [(ngModel)]="type2.meds" required #myMeds="ngModel" />
+         <label> no</label><br>
+         <input type="radio" name="meds" value="y" [(ngModel)]="type2.meds" required #myMeds="ngModel" />
+         <label> yes</label><br>
+
+         <h3>6. How often do you eat fruit and vegetables?</h3><br>
+         <input type="radio" name="eat" value="y" [(ngModel)]="type2.eat" required #myEat="ngModel" />
+         <label> everyday</label><br>
+         <input type="radio" name="eat" value="n" [(ngModel)]="type2.eat" required #myEat="ngModel" />
+         <label> less often</label><br>
+
+         <h3>7. Have you ever been diagnosed with elevated blood glucose levels?</h3><br>
+         <input type="radio" name="glucose" value="n" [(ngModel)]="type2.glucose" required #myGlucose="ngModel" />
+         <label> no</label><br>
+         <input type="radio" name="glucose" value="y" [(ngModel)]="type2.glucose" required #myGlucose="ngModel" />
+         <label> yes</label><br>
+
+         <h3>8. Are any of your family members (parents, siblings, grandparents, brothers or sisters) or any other members of your family diagnosed with diabetes (type 1 or type 2)?</h3><br>
+         <input type="radio" name="family" value="n" [(ngModel)]="type2.family" required #myGlucose="ngModel" />
+         <label> no</label><br>
+         <input type="radio" name="family" value="yw" [(ngModel)]="type2.family" required #myFamily="ngModel" />
+         <label> yes-grandparents, grandmothers, uncles, aunts, cousins (children of uncles or aunts)</label><br>
+         <input type="radio" name="family" value="yh" [(ngModel)]="type2.family" required #myFamily="ngModel" />
+         <label> yes-your parents, brothers and sisters, with your children, or with the children of your brothers or sisters</label><br>
+
+        <h3>9. Did any of your family members (parents, siblings, grandparents, brothers, sisters, cousins) have:</h3>
+        <input type="radio" name="illness" value="stroke" [(ngModel)]="type2.illness" required #myIllness="ngModel" />
+         <label> stroke</label><br>
+         <input type="radio" name="ilness" value="ha" [(ngModel)]="type2.illness" required #myIllness="ngModel" />
+         <label> heart attack</label><br>
+         <input type="radio" name="ilness" value="ht" [(ngModel)]="type2.illness" required #myIllness="ngModel" />
+         <label> hypertension</label><br>
+         <input type="radio" name="ilness" value="amp" [(ngModel)]="type2.illness" required #myIllness="ngModel" />
+         <label> non-traumatic lower limb amputation</label><br>
+         <input type="radio" name="ilness" value="none" [(ngModel)]="type2.illness" required #myIllness="ngModel" />
+         <label> none of the above</label><br>
+
+         <h3>10. Do you smoke?</h3><br>
+        <input type="radio" name="smoke" value="n" [(ngModel)]="type2.smoke" required #mySmoke="ngModel" />
+         <label> no</label><br>
+         <input type="radio" name="smoke" value="past" [(ngModel)]="type2.smoke" required #mySmoke="ngModel" />
+         <label> in the past</label><br>
+         <input type="radio" name="smoke" value="y" [(ngModel)]="type2.smoke" required #mySmoke="ngModel" />
+         <label> yes</label><br>
+
+
+          <button  class="btn red" type="submit" [disabled]="!myForm.valid">Calculate</button><br>
+      </form> <br/>
+  
+    </div>
+    <div *ngIf='showResult' class="center">
+        <label>Your score: {{type2.score|number}}</label><br>
+        <h1>If the sum of your points is ≥ 12, you should see a doctor.<br>
+            It is also recommended to reduce body weight and increase the level of physical activity.</h1>
+    </div>
+      <!-- <img src="https://wallpaperaccess.com/full/2443577.jpg"
+      class="responsive" /> -->
+    
+  
+  </body>
+  
+  
+  
+

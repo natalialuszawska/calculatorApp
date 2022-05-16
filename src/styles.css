@@ -1,0 +1,171 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body{
+    background-color: #c5dce8;
+   
+    
+     height:auto;
+     width: auto;
+     background-size: 100%;
+     background-size: cover;
+     background-position:50% 50%;
+    
+   }
+  .center{
+    text-align: center;
+  }
+  h1 {
+  
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    color: #ffffff;
+  }
+   label{
+    font-size: "x-large";
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  p{
+    display: block;
+    font-size: 1.0em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: normal;
+    color: #ffffff;
+  }
+  
+  .marg{
+    margin-left: 30px;
+  }
+    
+  .responsive {
+    width: 60%;
+    height: auto;
+  }
+  
+  /* @import url(https://fonts.googleapis.com/css?family=Open+Sans:400, 300, 600, 700); */
+  
+  html {
+    font-family: "Open Sans", sans-serif;
+  }
+  
+/*przyciski do zgadzania sie rusz a zabije*/
+
+  
+   .btn {
+      padding: 1em 2.1em 1.1em;
+      border-radius: 3px;
+      margin: 8px 8px 8px 8px;
+      color: #ffffff;
+      background-color:#ffffff;
+      display: inline-block;
+      background: #174473;
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      font-family: sans-serif;
+      font-weight: 800;
+      font-size: .85em;
+      text-transform: uppercase;
+      text-align: center;
+      text-decoration: none;
+      -webkit-box-shadow: 0em -0.3rem 0em rgba(0, 0, 0, 0.1) inset;
+      -moz-box-shadow: 0em -0.3rem 0em rgba(0, 0, 0, 0.1) inset;
+      box-shadow: 0em -0.3rem 0em rgba(0, 0, 0, 0.1) inset;
+      position: relative;
+  }
+  .btn:hover, .btn:focus {
+      opacity: 0.8;
+  }
+  .btn:active {
+      -webkit-transform: scale(0.80);
+      -moz-transform: scale(0.80);
+      -ms-transform: scale(0.80);
+      -o-transform: scale(0.80);
+      transform: scale(0.80);
+  }
+  .btn.block {
+      display: block !important;
+  }
+  .btn.circular {
+    border-radius: 50em !important;
+  }
+  /* Colours */
+  .red {
+      background-color: #174473;
+  }
+  
+  
+  .label {
+    font-size: x-large;
+  }
+  
+  .btn-h { 
+    color: #ffffff; 
+    background-color: #ED1F33; 
+    border-color: #E31010; 
+  } 
+   
+  .btn-h:hover, 
+  .btn-h:focus, 
+  .btn-h:active, 
+  .btn-h.active, 
+  .open .dropdown-toggle.btn-h { 
+    color: #ffffff; 
+    background-color: #D91852; 
+    border-color: #E31010; 
+  } 
+   
+  .btn-h:active, 
+  .btn-h.active, 
+  .open .dropdown-toggle.btn-h { 
+    background-image: none; 
+  } 
+   
+  .btn-h.disabled, 
+  .btn-h[disabled], 
+  fieldset[disabled] .btn-h, 
+  .btn-h.disabled:hover, 
+  .btn-h[disabled]:hover, 
+  fieldset[disabled] .btn-h:hover, 
+  .btn-h.disabled:focus, 
+  .btn-h[disabled]:focus, 
+  fieldset[disabled] .btn-h:focus, 
+  .btn-h.disabled:active, 
+  .btn-h[disabled]:active, 
+  fieldset[disabled] .btn-h:active, 
+  .btn-h.disabled.active, 
+  .btn-h[disabled].active, 
+  fieldset[disabled] .btn-h.active { 
+    background-color: #ED1F33; 
+    border-color: #E31010; 
+  } 
+   
+  .btn-h .badge { 
+    color: #ED1F33; 
+    background-color: #ffffff; 
+  }

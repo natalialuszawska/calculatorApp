@@ -1,0 +1,36 @@
+<body>
+    <div class="center">
+      <br>
+      <h1 class="center">Sugar</h1>
+  
+      <form #myForm="ngForm" (ngSubmit)="calculateSugar(myForm)">
+  
+        <label for="sugar">Sugar [mg/dl]</label> <br>
+        <input type="number" min="0" max="300"[(ngModel)]="cukier.sugar" name="sugar" required #sugar="ngModel"><br>
+        <label *ngIf="sugar.touched && !sugar.valid">Sugar required, the value must be grater or equal zero.</label><br>
+        
+        <br>
+        <button class="btn red" type="submit" [disabled]="!myForm.valid">Calculate</button><br>
+      </form> <br />
+      <!-- <img src="assets/img/bmi.png" alt="image" class="responsive" > -->
+    </div>
+    <div *ngIf='showResult' class="center">
+     <!--- <label>Sugar {{cukier.sugar|number : '1.2-2'}}</label><br> > -->
+      <label>{{cukier.info}}</label><br>
+  
+      <!-- <div class="chart-wrapper">
+        <canvas baseChart 
+        [data]="pieChartData" 
+        [labels]="pieChartLabels" 
+        [chartType]="pieChartType"
+        [options]="pieChartOptions"
+        [plugins]="pieChartPlugins"
+        [legend]="pieChartLegend">
+      </canvas> -->
+    <!-- </div> -->
+    </div>
+    <!-- <app-line-chart></app-line-chart> -->
+   
+  
+  </body>
+

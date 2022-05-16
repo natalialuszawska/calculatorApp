@@ -1,0 +1,44 @@
+<body>
+    <div class="center">
+      <br>
+      <h1 class="center">PEDIATRIC DOSE CALCULATOR</h1>
+  
+      <form #myForm="ngForm" (ngSubmit)="calculateParams(myForm)">
+  
+        <label for="height">Height (cm)</label> <br>
+        <input type="number" min="0" [(ngModel)]="dose.height" name="Height" required #height="ngModel"><br>
+        <label *ngIf="height.touched && !height.valid">Height required, the value must be grater or equal zero.</label><br>
+        
+        <label>Weight (kg)</label><br>
+        <input type="number" min="0" [(ngModel)]="dose.weight" name="Weight" required #weight="ngModel"><br>
+        <label *ngIf="weight.touched && !weight.valid">Weight required, the value must be grater or equal zero.</label><br>
+
+        <label>Adult dose mg per </label><br>
+        <input type="number" min="0" [(ngModel)]="dose.adultDose" name="AdultDose" required #adultDose="ngModel"><br>
+        <label *ngIf="weight.touched && !weight.valid">Adult required, the value must be grater or equal zero.</label><br>
+
+        <button class="btn red" type="submit" [disabled]="!myForm.valid">Calculate</button><br>
+      
+        
+      </form> <br />
+      <!-- <img src="assets/img/bmi.png" alt="image" class="responsive" > -->
+    </div>
+    <div *ngIf='showResult' class="center">
+      <label>Child Dose: {{dose.cos|number : '1.2-2'}}</label><br>
+      
+  
+      <!-- <div class="chart-wrapper">
+        <canvas baseChart 
+        [data]="pieChartData" 
+        [labels]="pieChartLabels" 
+        [chartType]="pieChartType"
+        [options]="pieChartOptions"
+        [plugins]="pieChartPlugins"
+        [legend]="pieChartLegend">
+      </canvas> -->
+    <!-- </div> -->
+    </div>
+    <!-- <app-line-chart></app-line-chart> -->
+   
+  
+  </body>

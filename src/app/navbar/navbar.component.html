@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-expand-sm">
+    <a class="navbar-brand" [routerLink]="''">CALC APP</a>
+  
+    <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+      &#9776;
+    </button>
+
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'bmi'" (click)="isMenuCollapsed = true">BMI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'kcalreq'" (click)="isMenuCollapsed = true">KCAL REQUIREMENT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'water'" (click)="isMenuCollapsed = true">WATER</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'cukier'" (click)="isMenuCollapsed = true">SUGAR </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'type2-diabetes'" (click)="isMenuCollapsed = true">TYPE 2 DIABETES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'insulin'" (click)="isMenuCollapsed = true">INSULIN RESISTANCE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'blood-pressure'" (click)="isMenuCollapsed = true">BLOOD PRESSURE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'covid19'" (click)="isMenuCollapsed = true">COVID-19</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'dose'" (click)="isMenuCollapsed = true">DRUG DOSES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'body-shape'" (click)="isMenuCollapsed = true">BODY SHAPE</a>
+          </li>
+         
+          <!-- <li *ngIf="isMenuLog" class="nav-item">
+            <a class="nav-link" [routerLink]="'user'" (click)="isMenuCollapsed = true">USER</a>
+          </li> -->
+          <!-- <li *ngIf="isMenuLog" class="nav-item">
+            <a class="nav-link" [routerLink]="'login'">Log OUT</a>
+          </li> -->
+        </ul>
+      </div>
+</nav>

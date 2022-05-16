@@ -1,0 +1,38 @@
+<body>
+    <div class="center">
+      <br>
+      <h1 class="center">Water</h1>
+  
+      <form #myForm="ngForm" (ngSubmit)="calculateWater(myForm)">
+  
+        <label>Weight (kg)</label><br>
+        <input type="number" min="0"  max="500"[(ngModel)]="water.weight" name="weight" required #weight="ngModel"><br>
+        <label *ngIf="weight.touched && !weight.valid">Weight required, the value must be grater or equal zero.</label><br>
+       
+        
+        <br>
+        <button class="btn red" type="submit" [disabled]="!myForm.valid">Calculate</button><br>
+      </form> <br />
+      <!-- <img src="assets/img/bmi.png" alt="image" class="responsive" > -->
+    </div>
+    <div *ngIf='showResult' class="center">
+        <label>{{water.i}}</label><br>
+      <label>{{water.result|number : '1.2-2'}} liter of water</label><br>
+      
+  
+      <!-- <div class="chart-wrapper">
+        <canvas baseChart 
+        [data]="pieChartData" 
+        [labels]="pieChartLabels" 
+        [chartType]="pieChartType"
+        [options]="pieChartOptions"
+        [plugins]="pieChartPlugins"
+        [legend]="pieChartLegend">
+      </canvas> -->
+    <!-- </div> -->
+    </div>
+    <!-- <app-line-chart></app-line-chart> -->
+   
+  
+  </body>
+

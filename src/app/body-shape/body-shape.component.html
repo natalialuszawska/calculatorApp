@@ -1,0 +1,37 @@
+<body>
+    <div class="center">
+      <br>
+      <h1 class="center">Body shape</h1>
+  
+      <form #myForm="ngForm" (ngSubmit)="calculateBody(myForm)">
+  
+        <label for="height">Waist (cm)</label> <br>
+        <input type="number" min="0" [(ngModel)]="body.waist" name="waist" required #waist="ngModel"><br>
+        <label *ngIf="waist.touched && !waist.valid">Waist required, the value must be grater or equal zero.</label><br>
+        <label>Hips (cm)</label><br>
+        <input type="number" min="0" [(ngModel)]="body.hips" name="hips" required #hips="ngModel"><br>
+        <label *ngIf="hips.touched && !hips.valid">Hips required, the value must be grater or equal zero.</label><br>
+        <input type="radio" name="gender" value="Man" ngModel required #myGender="ngModel" />
+        <label> Man</label>
+        <br>
+  
+        <input type="radio" name="gender" value="Women" ngModel required #myGender="ngModel" />
+        <label> Women</label>
+  
+        <br>
+        <button class="btn red" type="submit" [disabled]="!myForm.valid">Calculate</button><br>
+      </form> <br />
+      <!-- <img src="assets/img/bmi.png" alt="image" class="responsive" > -->
+    </div>
+    <div *ngIf='showResult' class="center">
+      <label>Your body shape is:</label><br>
+      <label>{{body.wynik}}</label><br>
+     
+
+    </div>
+
+   
+  
+  </body>
+    
+

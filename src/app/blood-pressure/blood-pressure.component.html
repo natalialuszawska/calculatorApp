@@ -1,0 +1,25 @@
+<body>
+   <div class="center">
+      <br>
+      <h1 class="center"><b>BLOOD PRESSURE</b></h1>
+      <form #myForm="ngForm" (ngSubmit)="submitdata()">
+        <label for="systolic" >Systolic pressure</label> <br>
+        <input type="number" min="0" max="180"[(ngModel)]="results.systolic" name="systolic" required #systolic="ngModel"><br>
+        <label *ngIf="systolic.touched && !systolic.valid">Blood pressure required, the value must be grater or equal zero.</label><br>
+  
+        <label for="diastolic" >Diastolic pressure</label> <br>
+        <input type="number" min="0" max="110" [(ngModel)]="results.diastolic" name="diastolic" required #diastolic="ngModel"><br>
+        <label *ngIf="diastolic.touched && !diastolic.valid">Blood pressure required, the value must be grater or equal zero.</label><br>
+  
+        <button  class="btn red" type="submit" [disabled]="!myForm.valid">Save</button><br>
+        
+        <div *ngIf="showResult" class="center">
+            <label>{{results.bloodprescom}}</label><br>
+        </div>
+
+      </form>
+    </div>
+</body>
+
+ 
+

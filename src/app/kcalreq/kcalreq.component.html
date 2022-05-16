@@ -1,0 +1,48 @@
+<body>
+    <div class="center">
+      <br>
+      <h1 class="center">KCAL REQUIREMENT</h1>
+      <h2>The daily requirement is calculated from the basic formula without taking into consideration the individual components of the body weight.</h2>
+      <form #myForm="ngForm" (ngSubmit)="kcalrequirement(myForm)">
+  
+         <label>Enter your weight (kg)</label><br>
+         <input type="number" min="0" [(ngModel)]="kcalreq.weight" name="weight" required #weight="ngModel"><br>
+          <label *ngIf="weight.touched && !weight.valid">Weight required, the value must be grater or equal zero.</label>
+  
+         <br/>
+         <label>Enter your height (cm)</label><br>
+         <input type="number" min="0" [(ngModel)]="kcalreq.height" name="height" required #height="ngModel"><br>
+        <label *ngIf="height.touched && !height.valid">Height required, the value must be grater or equal zero.</label>
+         <br/>
+  
+         <label style="font-size: x-large">Enter your age</label><br>
+         <input type="number" min="0" [(ngModel)]="kcalreq.age" name="age" required #age="ngModel"><br>
+         <label *ngIf="age.touched && !age.valid">Age required, the value must be grater or equal zero.</label>
+         <br>
+  
+         <input type="radio" name="gender" value="Man"
+         ngModel required #myGender="ngModel"
+         />
+         <label>  Man</label>
+         <br>
+  
+         <input type="radio" name="gender" value="Woman"
+         ngModel required #myGender="ngModel"
+         />
+         <label>  Woman</label>
+         <br>
+          <button  class="btn red" type="submit" [disabled]="!myForm.valid">Calculate</button><br>
+      </form> <br/>
+  
+    </div>
+    <div *ngIf='showResult' class="center">
+      <label>Your caloric requirement: {{kcalreq.requirement|number: '1.2-2'}}</label><br>
+    </div>
+      <!-- <img src="https://wallpaperaccess.com/full/2443577.jpg"
+      class="responsive" /> -->
+    
+  
+  </body>
+  
+  
+  

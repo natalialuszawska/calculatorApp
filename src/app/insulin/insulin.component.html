@@ -1,0 +1,30 @@
+<body>
+    <div class="center">
+      <br>
+      <h1 class="center">INSULIN RESISTANCE TEST</h1>
+  
+      <form #myForm="ngForm" (ngSubmit)="calculateInsulina(myForm)">
+  
+        <label for="height">Glucose (mg/dl)</label> <br>
+        <input type="number" min="0" [(ngModel)]="insulina.g" name="Glucose" required #height="ngModel"><br>
+        <label *ngIf="height.touched && !height.valid">Height required, the value must be grater or equal zero.</label><br>
+        <label>Insulin (md/dl)</label><br>
+        <input type="number" min="0" [(ngModel)]="insulina.i" name="Insulin" required #weight="ngModel"><br>
+        <label *ngIf="weight.touched && !weight.valid">Weight required, the value must be grater or equal zero.</label><br>
+       
+  
+        <br>
+        <button class="btn red" type="submit" [disabled]="!myForm.valid">Calculate</button><br>
+      </form> <br />
+     
+    </div>
+    <div *ngIf='showResult' class="center">
+      <label>{{insulina.info}}</label><br>
+     
+
+    </div>
+
+   
+  
+  </body>
+

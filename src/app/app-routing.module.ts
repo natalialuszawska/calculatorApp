@@ -11,6 +11,7 @@ import { KcalreqComponent } from './kcalreq/kcalreq.component';
 import { TitleTabComponent } from './title-tab/title-tab.component';
 import { Type2DiabetesComponent } from './type2-diabetes/type2-diabetes.component';
 import { WaterComponent } from './water/water.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 const routes: Routes = [
   { path: '', component: TitleTabComponent},
   { path: 'bmi', component: BmiComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'insulin', component:InsulinComponent},
   { path: 'covid19', component:Covid19Component},
   { path: 'dose', component:DoseComponent},
+  {path:'calculator',component:CalculatorComponent}
 ];
 
 @NgModule({

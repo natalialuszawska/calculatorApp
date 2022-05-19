@@ -18,6 +18,7 @@ import { InsulinComponent } from './insulin/insulin.component';
 import { DoseComponent } from './dose/dose.component';
 import { Covid19Component } from './covid19/covid19.component';
 import { Dose2Component } from './dose2/dose2.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { Dose2Component } from './dose2/dose2.component';
     InsulinComponent,
     DoseComponent,
     Covid19Component,
-    Dose2Component
+    Dose2Component,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule,

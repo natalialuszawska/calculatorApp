@@ -7,10 +7,10 @@
   
         <label for="height">Glucose (mg/dl)</label> <br>
         <input type="number" min="0" [(ngModel)]="insulina.g" name="Glucose" required #height="ngModel"><br>
-        <label *ngIf="height.touched && !height.valid">Height required, the value must be grater or equal zero.</label><br>
-        <label>Insulin (md/dl)</label><br>
+        <label *ngIf="height.touched && !height.valid">Glucose level is required, the value must be grater or equal zero.</label><br>
+        <label>Insulin (mU/ml)</label><br>
         <input type="number" min="0" [(ngModel)]="insulina.i" name="Insulin" required #weight="ngModel"><br>
-        <label *ngIf="weight.touched && !weight.valid">Weight required, the value must be grater or equal zero.</label><br>
+        <label *ngIf="weight.touched && !weight.valid">Insuline weight is required, the value must be grater or equal zero.</label><br>
        
   
         <br>

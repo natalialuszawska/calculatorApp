@@ -14,6 +14,7 @@
         <label>Age</label><br>
         <input type="number" min="0" [(ngModel)]="cov.age" name="age" required #age="ngModel"><br>
         <label *ngIf="age.touched && !age.valid">Weight required, the value must be grater or equal zero.</label><br>
+
         <input type="radio" name="gender" value="Man" [(ngModel)]="cov.gender" ngModel required #myGender="ngModel" />
         <label> Man</label>
         <br>
@@ -24,14 +25,21 @@
         <button class="btn red" type="submit" [disabled]="!myForm.valid">Calculate</button><br>
       </form> <br />
       <!-- <img src="assets/img/bmi.png" alt="image" class="responsive" > -->
-    </div>
-    <div *ngIf='showResult' class="center">
-      
-      <label>{{cov.comment}}</label><br>
+  </div>
+    <div class="center">
+      <img src="assets/img/bmi&age.png" >
     
-  
+    <p>Both graphs show the multiple odds of a severe course of COVID-19 compared to a 20-year-old woman with a normal BMI.<br>
+      Note that men are approximately twice as likely to develop COVID-19 severely as women.</p>
+    
     </div>
+
+
+  <div *ngIf='showResult' class="center">
+    
+    <label>{{cov.comment}}</label><br>
   
-   
+
+  </div>
   
   </body>
